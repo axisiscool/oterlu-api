@@ -1,0 +1,36 @@
+name: Continuous Delivery
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Publish:
+    name: Publish Next (NPM)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # renovate: tag=v2
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js v16
+        uses: actions/setup-node@1f8c6b94b26d0feae1e387ca63ccbdc44d27b561 # renovate: tag=v2
+        with:
+          node-version: 16.x
+          cache: yarn
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install Dependencies
+        run: yarn --immutable
+
+      - name: Bump Version & Publish
+        run: |
+          # Bump the version
+          yarn standard-version --skip.commit --skip.tag --prerelease "next.$(git rev-parse --verify --short HEAD)"
+
+          # Publish to NPM
+          npm publish --tag next
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
