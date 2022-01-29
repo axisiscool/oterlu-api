@@ -22,7 +22,7 @@ export async function classifyContent(content: string) {
 
 	return {
 		...responseAsJson,
-		isFlagged: responseAsJson.labels.every(label => label.level > 0)
+		isFlagged: responseAsJson.labels.some(label => label.level > 0)
 	};
 }
 
