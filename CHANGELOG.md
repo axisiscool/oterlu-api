@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/axisiscool/oterlu-api/compare/v0.0.4...v0.0.5) (2022-01-29)
+
+
+### Bug Fixes
+
+* **requests:** not properly sending classify request ([5022bae](https://github.com/axisiscool/oterlu-api/commit/5022bae4bf520bbe722345efc299251509d0a01c))
+
 ### [0.0.4](https://github.com/axisiscool/oterlu-api/compare/v0.0.3...v0.0.4) (2022-01-29)
 
 
