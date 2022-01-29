@@ -3,7 +3,6 @@
 		"target": "ESNext",
 		"module": "CommonJS",
 		"outDir": "./dist",
-		"noEmit": true,
 		"esModuleInterop": true,
 		"importHelpers": true,
 		"skipLibCheck": true
