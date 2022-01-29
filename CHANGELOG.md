@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/axisiscool/oterlu-api/compare/v0.0.2...v0.0.3) (2022-01-29)
+
+
+### Bug Fixes
+
+* **classifyContent:** make sure isFlagged checks that only one level is above 0 ([c5c93b8](https://github.com/axisiscool/oterlu-api/commit/c5c93b8fac553cf1f1c7061b997dba84542f95a2))
+
 ### 0.0.2 (2022-01-29)
 
 
