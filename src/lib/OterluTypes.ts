@@ -1,10 +1,26 @@
 export interface OterluReturnType {
+	/**
+	 * The message sent back from the API.
+	 * @remark This is only defined when there's an error.
+	 */
 	message?: OterluErrorMessages;
+
+	/**
+	 * The labels sent back by the API.
+	 * @remark This is only defined when the request was sent without error.
+	 */
 	labels?: OterluLabels;
 }
 
 export type OterluLabels = {
+	/**
+	 * The possible labels provided by the model.
+	 */
 	label: 'PROFANITY' | 'TOXIC' | 'NSFW' | 'PERSONAL_INFO';
+
+	/**
+	 * How confident the model is of the label ranging 0-3.
+	 */
 	level: number;
 }[];
 

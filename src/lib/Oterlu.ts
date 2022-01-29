@@ -6,14 +6,14 @@ const userAgent = `Oterlu-API (petitio) ${platform()}/${release()} (https://gith
 
 /**
  * The stored API Key for Oterlu.
- * @since 1.0.0
+ * @since 0.0.1
  */
 let apiKey: string;
 
 /**
  * Checks if a string is flagged by one of Oterlu's filters.
  * @remark See https://api-docs.oterlu.com/#section/General for more information.
- * @since 1.0.0
+ * @since 0.0.1
  */
 export async function classifyContent(content: string) {
 	if (content.length > 500) throw new Error(OterluErrors.ContentTooLong);
@@ -38,7 +38,7 @@ export async function classifyContent(content: string) {
 /**
  * Sets an API key for Oterlu.
  * @remark If you do not have an API key, please get one from https://signup.oterlu.com.
- * @since 1.0.0
+ * @since 0.0.1
  */
 export function setApiKey(key: string) {
 	apiKey = key;
@@ -47,7 +47,7 @@ export function setApiKey(key: string) {
 /**
  * Internal function to parse errors.
  * @private
- * @since 1.0.0
+ * @since 0.0.3
  */
 function parseApiError(message: OterluErrorMessages) {
 	switch (message) {
