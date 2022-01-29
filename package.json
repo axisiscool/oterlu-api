@@ -1,11 +1,13 @@
 {
 	"name": "oterlu-api",
 	"version": "0.0.1",
-	"main": "dist/index.js",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
 	"author": "Axis (axis@axis.lol)",
 	"license": "MIT",
 	"scripts": {
-		"build": "tsc",
+		"build": "tsup",
 		"sversion": "standard-version",
 		"commit": "git-cz",
 		"cz": "git-cz",
@@ -25,6 +27,7 @@
 		"lint-staged": "^12.3.2",
 		"prettier": "^2.5.1",
 		"standard-version": "^9.3.2",
+		"tsup": "^5.11.11",
 		"typescript": "^4.5.5"
 	},
 	"repository": {
